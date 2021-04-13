@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="src/img/favicon/favicon-96x96.png">
+  <link rel="stylesheet" href="src/css/style.css">
+  <title>Kontakt</title>
+</head>
+
+<body>
+  <!-- ########################### Navigation ################### -->
+
+  <nav id="nav-container">
+    <a href="index.html" title="Schreinerei-Tischler"></a>
+    <ul>
+      <li><a href="index.html" title="Zurück zur Startseite">Startseite</a></li>
+      <li><a href="moebelbau.html" title="Zu den Räumlichkeiten">Möbelbau</a></li>
+      <li><a href="projekte.html" title="Zu Unseren Projekten">Projekte</a></li>
+      <li><a href="werkstatt.html" title="Zu unserer Werkstatt">Werkstatt</a></li>
+      <li><a href="impressum.html" title="Unser Impressum">Impressum</a></li>
+      <li class="active"><a href="kontakt.html" title="Wenn Sie uns Schreiben möchten">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- ########################### Header ######################### -->
+
+  <header class="header-img-other">
+    <div class="header-row-other">
+      <h2>Kontakt</h2>
+    </div>
+  </header>
+
+  <!-- ########################### Content ######################### -->
+
+
+  <div class="kontakt-cont">
+    <div class="kontakt-row2">
+
+      <div class="kontakt-col1">
+        <fieldset>
+          <legend>Kontakt zu uns</legend>
+          <p>Sie können uns Telefonisch, per E-mail erreichen oder
+            uns in unsere Werkstatt zuwischen 7.00 Uhr und 16.00 Uhr Besuchen. </p>
+
+          <ul>
+            <li>Musterstrasse 111, Musterstadt 21568</li>
+            <li>0208 / 11 22 33</li>
+            <li><i><a href="mailto:schreinerei-tischler@gmail.com" title="Schreiben Sie uns gerne eine Email">schreinerei-tischler@gmail.com</a></i></li>
+            <li>Montag -Freitag 7.00 h - 16.00 h</li>
+            <li>Samstag und Sonntag Geschlossen</li>
+          </ul>
+        </fieldset>
+      </div>
+
+      <div class="kontakt-col2">
+        <form action="#">
+          <fieldset>
+            <legend>Schreiben Sie Uns</legend>
+
+            <div class="required">
+              <label for="anliegen">Ihr Anliegen
+                <select name="anliegen" id="anliegen" required>
+                  <option value="">&nbsp;</option>
+                  <option value="moebelbau">Möbelbau</option>
+                  <option value="projekte">Projekte</option>
+                  <option value="planung">Planung</option>
+                  <option value="sonstiges">Sonstiges</option>
+                </select>
+              </label>
+            </div>
+
+            <div>
+              <label for="vorname"></label>
+              <input type="text" name="vorname" id="vorname" placeholder="Vorname">
+            </div>
+
+            <div>
+              <label for="nachname"></label>
+              <input type="text" name="nachname" id="nachname" placeholder="Nachname">
+            </div>
+
+            <div class="required">
+              <label for="tel"></label>
+              <input type="tel" name="tel" id="tel" autocomplete="off" placeholder="Handy/Telefonnr" pattern="[0-9]{5,15}" required>
+            </div>
+
+            <div class="required">
+              <label for="email"></label>
+              <input type="email" name="email" id="email" placeholder="E-mail Adresse" required>
+            </div>
+
+            <div>
+              <label for="textarea">Ihre Nachricht</label>
+              <textarea name="textarea" rows="10" cols="60" id="textarea"></textarea>
+            </div>
+
+            <input type="submit" value="Absenden">
+
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="karte-schatten">
+        <iframe class="karte"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5249.10348107688!2d2.783169935027637!3d48.86675766034242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e61d19ca7ae2bd%3A0x57faf8cb6310e660!2sDisneyland%20Paris!5e0!3m2!1sde!2sde!4v1605604208251!5m2!1sde!2sde"
+          width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ######################## Footer ######################### -->
+
+  <footer id="footer-container">
+    <div class="footer-links">
+      <ul>
+        <li><a href="index.html" title="Zurück zur Startseite">Startseite</a></li>
+        <li><a href="moebelbau.html" title="Zu den Räumlichkeiten">Möbelbau</a></li>
+        <li><a href="projekte.html" title="Zu Unseren Projekten">Projekte</a></li>
+        <li><a href="werkstatt.html" title="Zu unserer Werkstatt">Werkstatt</a></li>
+        <li><a href="impressum.html" title="Unser Impressum">Impressum</a></li>
+        <li><a href="datenschutz.html" title="Zu Unsere Datenschutzerklärung">Datenschutzerklärung</a></li>
+        <li><a class="active-footer" href="kontakt.html" title="Sie sind Hier">Kontaktformular</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-adresse">
+      <h3>Kontakt</h3>
+      <ul>
+        <li>Musterstrasse 111, Musterstadt 21568</li>
+        <li>0208 / 11 22 33</li>
+        <li><i><a href="mailto:schreinerei-tischler@gmail.com" title="Schreiben Sie uns gerne eine Email">schreinerei-tischler@gmail.com</a></i></li>
+        <li>Montag -Freitag:  &nbsp; &nbsp; 7.00 h - 16.00 h</li>
+        <li>Samstag und Sonntag: &nbsp; &nbsp; <b>Geschlossen</b></li>
+      </ul>
+    </div>
+    <div class="copyright">
+      <p>&copy;Copyright 2020 Schreinerei Tischler Designt by Mike Schneider</p>
+    </div>
+  </footer>
+</body>
+
+</html>
