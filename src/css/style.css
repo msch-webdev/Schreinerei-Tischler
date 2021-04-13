@@ -1,0 +1,928 @@
+
+/* Farbschemen
+
+  #373a40 - Antrazit
+  #52575d - hell antrazit
+  #d9ecf2 - hell hell grau
+  #ffd57e - sand
+ */
+
+ /* === Fonts === */
+
+ /* raleway-regular - latin */
+ @font-face {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../fonts/Raleway/raleway-v16-latin-regular.eot');
+   src: local('Raleway'), local('Raleway-Regular'),
+        url('../fonts/Raleway/raleway-v16-latin-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway/raleway-v16-latin-regular.woff2') format('woff2'),
+        url('../fonts/Raleway/raleway-v16-latin-regular.woff') format('woff'),
+        url('../fonts/Raleway/raleway-v16-latin-regular.ttf') format('truetype'),
+        url('../fonts/Raleway/raleway-v16-latin-regular.svg#Raleway') format('svg');
+ }
+ /* raleway-italic - latin */
+ @font-face {
+   font-family: 'Raleway';
+   font-style: italic;
+   font-weight: 400;
+   src: url('../fonts/Raleway/raleway-v16-latin-italic.eot');
+   src: local('Raleway Italic'), local('Raleway-Italic'),
+        url('../fonts/Raleway/raleway-v16-latin-italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway/raleway-v16-latin-italic.woff2') format('woff2'),
+        url('../fonts/Raleway/raleway-v16-latin-italic.woff') format('woff'),
+        url('../fonts/Raleway/raleway-v16-latin-italic.ttf') format('truetype'),
+        url('../fonts/Raleway/raleway-v16-latin-italic.svg#Raleway') format('svg');
+ }
+ /* raleway-700italic - latin */
+ @font-face {
+   font-family: 'Raleway';
+   font-style: italic;
+   font-weight: 700;
+   src: url('../fonts/Raleway/raleway-v16-latin-700italic.eot');
+   src: local('Raleway Bold Italic'), local('Raleway-BoldItalic'),
+        url('../fonts/Raleway/raleway-v16-latin-700italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway/raleway-v16-latin-700italic.woff2') format('woff2'),
+        url('../fonts/Raleway/raleway-v16-latin-700italic.woff') format('woff'),
+        url('../fonts/Raleway/raleway-v16-latin-700italic.ttf') format('truetype'),
+        url('../fonts/Raleway/raleway-v16-latin-700italic.svg#Raleway') format('svg');
+ }
+ /* raleway-700 - latin */
+ @font-face {
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 700;
+   src: url('../fonts/Raleway/raleway-v16-latin-700.eot');
+   src: local('Raleway Bold'), local('Raleway-Bold'),
+        url('../fonts/Raleway/raleway-v16-latin-700.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway/raleway-v16-latin-700.woff2') format('woff2'),
+        url('../fonts/Raleway/raleway-v16-latin-700.woff') format('woff'),
+        url('../fonts/Raleway/raleway-v16-latin-700.ttf') format('truetype'),
+        url('../fonts/Raleway/raleway-v16-latin-700.svg#Raleway') format('svg');
+ }
+
+/* ############################################################ */
+/* ######################### Global ########################### */
+
+* {box-sizing: border-box;}
+
+body {
+  font-family: 'Raleway', 'Verdana', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #fafafa;
+}
+
+img {
+  box-shadow: 5px 5px 10px #52575d;
+}
+
+.active {border-bottom: 4px solid #ffd57e;}
+
+
+/* ############################################################ */
+/* ##################### Header -Bereiche ##################### */
+
+.header-img {
+  background:linear-gradient(hsla(360,0%,0%,0.1), hsla(360,0%,0%,0.2)), url(../img/flur.jpg) no-repeat bottom;
+  background-size: cover;
+  width: 100%;
+  height: 0;
+  padding-top: 26.6666%; /* <-- drückt den header runter um Background Image zu skalieren
+  1920 / 1024 * 100 / 2 = 26.66666% */
+}
+
+/* ##### Header start-seite ##### */
+.header-img h1 {
+  color: #fff;
+  font-size: 4vw;
+  margin-top: -3.5em;
+  margin-left: 2.8em;
+}
+
+.header-img h2 {
+  color: #fff;
+  font-size: 2.5vw;
+  margin-top: -1.1em;
+  margin-left: 4.5em;
+}
+
+.header-img h2:after {
+  display: block;
+  position: absolute;
+  content:"";
+  width: 8em;
+  height: 4px;
+  background: #ffd57e;
+}
+
+.header-img a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5vw;
+  margin-bottom: 3em;
+  margin-left: 7.5em;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+.header-img a:hover,
+.header-img a:focus {
+  border: none;
+  outline: 4px solid #ffd57e;
+}
+
+/* ### header-seiten ### */
+.header-img-other {
+  background:linear-gradient(hsla(360,0%,0%,0.8), hsla(360,0%,0%,0.8)), url(../img/flur.jpg) no-repeat bottom;
+  background-size: cover;
+  width: 100%;
+  height: 0;
+  padding-top: 16.6666%;
+}
+
+.header-row-other {
+  position: absolute;
+  text-align: center;
+  top: 8em;
+  width: 100%;
+}
+
+.header-img-other h2 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 5vw;
+}
+/* ############################################################ */
+/* ########################## navigation ###################### */
+
+#nav-container > a {
+  position: absolute;
+  background: url(../img/tischlerlogo.png) no-repeat center center;
+  background-size: contain;
+  width: 10em;
+  height: 4em;
+  margin-left: -2px;
+}
+
+#nav-container {
+  max-width: 100em;
+  margin: 0 auto;
+  background-color: #373a40;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  margin-left: 10em;
+  margin-top: 0;
+  margin-bottom: 0;
+  justify-content: space-around;
+}
+
+nav li {
+  height: 70px;
+  flex-grow: 1;
+  margin-right: 4px;
+}
+
+nav a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: #d9ecf2;
+  font-size: 1.2em;
+  padding: 24px 0 24px 0;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #d9ecf2;
+  color: #373a40;
+}
+
+/* ############################################################ */
+/* ##################### Content Bereiche ###################### */
+
+/* ### Startseite ### */
+
+.start-content {
+  max-width: 100em;
+  margin: 0 auto;
+  padding-top: 3.75em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+.start-content h2 {
+  text-align: center;
+  font-size: 3em;
+  color: #373a40;
+}
+
+.start-content p {
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+.start-content p i > a {
+  text-decoration: none;
+  color: #52575d;
+}
+
+.start-content p i > a:hover,
+.start-content p i > a:focus {
+  text-decoration:underline;
+  font-size: 1.1em;
+  color: #373a40;
+}
+
+.middle-content{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100em;
+  margin: 0 auto;
+  padding-top: 3.75em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+.middle-content h3 {
+  width: 100%;
+  color: #373a40;
+  font-size: 3em;
+}
+
+.middle-content p {
+  color: #373a40;
+  font-size: 1.2em;
+}
+
+
+.middle-content img {
+  width: 50%;
+  height: auto;
+}
+
+.middle-content article {
+  width: 50%;
+  padding: 2%;
+}
+.middle-content article h4 {
+  color: #373a40;
+  font-size: 2em;
+}
+
+/* ##### Möbelbau ##### */
+.flex {
+  display:flex;
+  margin: 5%;
+}
+
+.moebelbau-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100em;
+  margin: 0 auto;
+  padding-top: 3.75em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+#wohnen,
+#schlafen,
+#küchen,
+#bad {
+  width: 100%;
+  height: auto;
+}
+
+.col50 {
+  text-align: justify;
+  width: 50%;
+  margin: 2%;
+}
+
+div.flex {
+  background-color: #eaeaea;
+}
+
+article.col50 h3 {
+  color: #373a40;
+  font-size: 3em;
+}
+
+article.col50 p {
+  font-size: 1.2em;
+}
+
+div.flex img {
+  width: 50%;
+  height: auto;
+}
+
+
+
+/* ##### Projekte ##### */
+
+#projekt-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100em;
+  margin: 0 auto;
+  padding-top: 3.75em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+#projekt-container figure {
+  width: 50%;
+}
+
+figcaption {
+  color: #373a40;
+  font-size: 3em;
+  margin-bottom: 0.8em;
+}
+
+#projekt-container figure:hover,
+#projekt-container figure:hover {
+  opacity: 0.8;
+}
+
+#projekt-container img {
+  width: 90%;
+  height: auto;
+}
+
+.projekte-article {
+  background: #eaeaea;
+  font-size: 1.2em;
+  width: 40%;
+  height: auto;
+  padding: 2%;
+}
+
+.projekte-article h3 {
+  color: #373a40;
+  font-size: 3em;
+}
+
+.visible {
+  display: none;
+}
+
+
+/* ##### Werkstatt ##### */
+
+#werkstatt-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100em;
+  margin: 0 auto;
+  padding-top: 3.75em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-bottom: 2.5em;
+}
+
+#werkzeug, #cnc {
+  max-width: 100%;
+  min-height: 500px;
+}
+
+.werkzeug {
+  margin: 2%;
+}
+
+.werkzeug h3{
+  color: #373a40;
+  font-size: 2em;
+}
+
+/* ##### Impressum ##### */
+
+
+#impressum {
+  max-width: 100em;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px 70px;
+  text-align: justify;
+}
+
+#impressum h1,h2,h3,h4,h5,h6 {
+  font-size: 3em;
+  color: #373a40;
+}
+
+#impressum p {
+  font-size: 1.2em;
+}
+
+/* ##### Datenschutz ##### */
+
+#datenschutz {
+  max-width: 100em;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px 70px;
+  text-align: justify;
+}
+
+#datenschutz h1,h2,h3,h4,h5,h6 {
+  font-size: 3em;
+  color: #373a40;
+}
+
+#datenschutz p {
+  font-size: 1.2em;
+}
+
+/* ##### Kontakt ##### */
+
+.kontakt-cont {
+  background-color: #fafafa;
+  max-width: 100em;
+  height: auto;
+  margin: 0 auto;
+}
+
+.kontakt-cont fieldset {
+  border: none;
+}
+
+.kontakt-cont fieldset {
+  border: 2px solid #ffd57e;
+}
+
+.kontakt-cont legend {
+  color: #373a40;
+  font-size: 3em;
+}
+
+.kontakt-row2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding: 2em;
+}
+
+.kontakt-col1 {
+  background-color: #fafafa;
+  width: 48%;
+  height: auto;
+  padding: 1em;
+}
+
+.kontakt-col1 p {
+  color: #373a40;
+  margin: 2%;
+  font-size: 1.2em;
+  padding-right: 9.375em;
+}
+
+.kontakt-col1 ul {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 3.125em;
+}
+
+.kontakt-col1 ul li:nth-child(1):before,
+.footer-adresse ul li:nth-child(1):before {
+  content: "";
+  display: inline-block;
+  background: url(../img/typicons/home-outline.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -3px;
+  margin-right: 15px;
+}
+
+.kontakt-col1 ul li:nth-child(2):before,
+.footer-adresse ul li:nth-child(2):before {
+  content: "";
+  display: inline-block;
+  background: url(../img/typicons/phone-outline.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -3px;
+  margin-right: 15px;
+}
+
+.kontakt-col1 ul li:nth-child(3):before,
+.footer-adresse ul li:nth-child(3):before {
+  content: "";
+  display: inline-block;
+  background: url(../img/typicons/mail.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -3px;
+  margin-right: 15px;
+}
+
+.kontakt-col1 ul li:nth-child(4):before,
+.footer-adresse ul li:nth-child(4):before {
+  content: "";
+  display: inline-block;
+  background: url(../img/typicons/chart-area-outline.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -3px;
+  margin-right: 15px;
+}
+
+.kontakt-col1 ul li:nth-child(5):before,
+.footer-adresse ul li:nth-child(5):before {
+  content: "";
+  display: inline-block;
+  background: url(../img/typicons/chart-area.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -3px;
+  margin-right: 15px;
+}
+
+
+.kontakt-col1 li {
+  margin-top: 1.56em;
+}
+
+.kontakt-col1 [href] {
+  color: #373a40 ;
+}
+
+.kontakt-col1 [href]:hover,
+.kontakt-col1 [href]:focus {
+  font-size: 1.1em;
+}
+
+.kontakt-col2 {
+  width: 48%;
+  background-color: #fafafa;
+  padding: 1em;
+}
+
+div.kontakt-col2 div {
+  margin-top: 2.5em;
+}
+
+select {
+  margin-left: 1.875em;
+}
+
+div.kontakt-col2 label {
+  display: inline-block;
+}
+
+form div > input {
+  background: #fafafa;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid #dadada;
+}
+
+div.kontakt-col2 select {
+  border: 1px solid #dadada;
+}
+
+#textarea {
+  display: block;
+  max-width: 25em;
+  height: auto;
+  border: 1px solid #dadada;
+}
+
+[type="submit"] {
+  background-color: #fff;
+  border: 2px solid #373a40;
+  margin-top: 1.25em;
+  padding: 10px 15px;
+  font-size: 1.2em;
+}
+
+[type="submit"]:hover,
+[type="submit"]:focus {
+  background-color: #373a40;
+  border-color: #ffd57e;
+  color: #fff;
+}
+
+.karte {
+  width: 100%;
+}
+
+.karte-schatten {
+  margin-top: 4em;
+  width: 100%;
+  box-shadow: 5px 5px 10px #52575d;
+}
+
+
+
+/* ##### Kontakt Pflichtfelder ##### */
+
+input:hover {
+  background-color: #d9ecf2;
+}
+
+form input:focus,
+select:focus {
+  outline: none;
+}
+
+form textarea:focus {
+  outline: none;
+}
+
+.required label:before {
+  content: "*" " ";
+  color: red;
+}
+
+input:focus:invalid, .invalid {
+  border-bottom: 1px solid red;
+}
+
+input:focus:valid, .required input:valid {
+  border-bottom: 1px solid green;
+}
+
+/* ############################################################ */
+/* ##################### Footer Bereiche ###################### */
+
+#footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  max-width: 100em;
+  margin: 0 auto;
+  background-color: #373a40;
+}
+
+.footer-links {
+  width: 30%;
+  padding-top: 3.125em;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a {
+  margin-top: 15px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+}
+
+.footer-adresse {
+  width: 30%;
+  margin: 1.562em;
+}
+
+.footer-adresse h3 {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 0.625em;
+}
+
+.footer-adresse ul {
+  margin-top: 0.625em;
+  padding-left: 0px;
+
+}
+
+.footer-adresse li {
+  list-style: none;
+  padding-top: 0.625em;
+  padding-right: 0.625em;
+  color: #fff;
+}
+
+.footer-adresse [href] {
+  color: #fff;
+}
+
+.footer-adresse [href]:hover,
+.footer-adresse [href]:focus {
+  font-size: 1.1em;
+}
+
+.active-footer {
+  border-bottom: 4px solid #ffd57e;
+}
+
+.copyright {
+  width: 100%;
+  margin-bottom: 1.562em;
+}
+
+.copyright p {
+  width: 60%;
+  margin: 0 auto;
+  border-top: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+}
+
+/* ############################################################ */
+/* ##################### Media-Query ###################### */
+
+/* ##### 840px ##### */
+
+@media screen and (max-width: 52.5em) {
+
+  .header-img {
+    background:linear-gradient(hsla(360,0%,0%,0.1), hsla(360,0%,0%,0.2)), url(../img/flur.jpg) no-repeat bottom;
+    background-size: cover;
+    width: 100%;
+    height: 0;
+    padding-top: 35%;
+  }
+
+  /* ### Header start-seite ### */
+  .header-img h1 {
+    font-size: 6vw;
+    margin-top: -4.5em;
+    margin-left: 2em;
+  }
+
+  .header-img h2 {
+    font-size: 4vw;
+    margin-top: -1.1em;
+    margin-left: 3em;
+  }
+
+  .header-img h2:after {
+    width: 8em;
+  }
+
+  .header-img a {
+    font-size: 1.9vw;
+    margin-left: 6.3em;
+    padding: 0.75em;
+  }
+
+  /* ### Header start-seite ### */
+
+  .header-row-other {
+    top: 5em;
+  }
+
+  .header-img-other h2 {
+    font-size: 6vw;
+  }
+
+  /* ##### Content Bereiche ###### */
+
+  /* ##### Möbelbau ##### */
+
+  #wohnen,
+  #schlafen,
+  #küchen,
+  #bad {
+    flex-wrap: wrap;
+  }
+
+  .col50 {
+    width: 100%;
+  }
+
+  div.flex img {
+    width: 100%;
+  }
+
+  /* ##### Projekte ##### */
+
+  #projekt-container figure {
+    width: 100%;
+  }
+
+  #projekt-container img {
+    width: 100%;
+  }
+
+  .projekte-article {
+    padding: 0 2.5em;
+    width: 100%;
+  }
+
+  /* ##### Werkstatt ##### */
+
+  #werkzeug, #cnc {
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-height: 500px;
+  }
+
+}
+
+/* ##### 750px ##### */
+
+@media screen and (max-width: 49em) {
+
+  .header-row-other {
+    top: 26em;
+  }
+
+  #nav-container ul {
+    margin-left: 3.125em;
+  }
+
+  #nav-container > a {
+    width: 12.5em;
+    height: 12.5em;
+    margin-left: -2px;
+    left: 50%;
+  }
+
+  #nav-container {
+    max-width: 100em;
+    margin: 0 auto;
+    background-color: #373a40;
+  }
+
+  nav ul {
+    width: 8.125em;
+    flex-wrap: wrap;
+    margin-left: 1em;
+  }
+
+  /* ###Content startseite### */
+
+  .middle-content{
+    flex-wrap: wrap;
+  }
+
+  .middle-content img {
+    width: 100%;
+  }
+
+  .middle-content article {
+    width: 100%;
+  }
+
+  /* ###Content Kontakt### */
+
+  .kontakt-col1 {
+    width: 100%;
+  }
+
+  .kontakt-col2 {
+    width: 100%;
+  }
+
+  /* ##### Datenschutz ##### */
+
+  .datenschutz {
+    padding-top: 15%;
+  }
+}
+
+/* ##### 600px ##### */
+
+@media screen and (max-width: 40em) {
+
+  .header-img-other {
+    padding-top: 28%;
+  }
+
+  .header-row-other {
+    top: 28em;
+  }
+
+  .footer-adresse {
+    padding-left: 3.125em;
+  }
+
+  .footer-links {
+    margin-right: 0.625em;
+  }
+
+}
+
+/* ##### 490px ##### */
+
+@media screen and (max-width: 32em) {
+
+  .footer-links {
+    width: 100%;
+    padding-top: 3.125em;
+    padding-left: 3.125em;
+  }
+
+  .footer-adresse {
+    width: 100%;
+    margin: 1.562em;
+  }
+
+}
